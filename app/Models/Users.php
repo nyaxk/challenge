@@ -9,7 +9,17 @@ use Laravel\Scout\Searchable;
 class Users extends Model
 {
     use Searchable;
+
     protected $primaryKey = "id";
+
+    /**
+     * Laravel scout search
+     * @return string
+     */
+    public function searchableAs(): string
+    {
+        return 'name';
+    }
 
     /**
      * Get a personal user account, if any.
