@@ -6,7 +6,6 @@ use App\Models\Accounts;
 use App\Models\Users;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
-use function Clue\StreamFilter\fun;
 
 class AccountsController extends Controller
 {
@@ -49,7 +48,7 @@ class AccountsController extends Controller
      */
     public function show($id): Collection
     {
-        return Accounts::getAccountByID($id);
+        return Accounts::getAccount($id);
     }
 
     /**

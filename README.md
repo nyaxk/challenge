@@ -1,5 +1,11 @@
 # Desafio Backend
 
+## Instruções Laradock
+Para o funcionamento do laradock siga as instruções:
+- Copie o arquivo `.env.example` e salve como `.env`
+- Dê o comando dentro da pasta do laradock `docker-compose up -d nginx postgres workspace meiliseach`
+- Após isso o servidor já vai estar funcionando no seu endereço http://localhost
+
 ## Problema
 A idez é uma fintech que busca oferecer tecnologia de ponta para outras empresas do ecosistema financeiro. Um dos passos necessários para completarmos essa missão é implementar a criação de contas para utilização do nosso aplicativo em diferentes plataformas. 
 É importante lembrar que o seu sistema será integrado aos nossos painéis internos e ao aplicativo.
