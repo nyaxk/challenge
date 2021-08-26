@@ -15,6 +15,10 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('accounts_id');
+            $table->decimal('value', 15, 2);
+            $table->enum('type', ['billPayment', 'deposit', 'transfer', 'cellPhoneRecharge', 'purchaseCredit']);
             $table->timestamps();
         });
     }

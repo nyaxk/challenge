@@ -8,7 +8,7 @@ Todo o processo começa com a criação de um Usuário. Um usuário pode ter mai
 De um **Usuário (User)**, queremos saber seu `Nome Completo`, `CPF`, `Número de Telefone`, `e-mail` e `Senha`. 
 CPFs e e-mails devem ser únicos no sistema. Sendo assim, seu sistema deve permitir apenas um cadastro com o mesmo CPF ou endereço de e-mail.
 
-Os tipos de conta que existem na idez são **Empresarial (Company)** e **Pessoal (Person)**. Todas as contas sempre estarão vinculadas a um usuário e possuem alguns dados em comum: `Id da Conta`, `Agência`, `Número` e `Dígito`. 
+Os tipos de conta que existem na idez são **Empresarial (Company)** e **Pessoal (Personal)**. Todas as contas sempre estarão vinculadas a um usuário e possuem alguns dados em comum: `Id da Conta`, `Agência`, `Número` e `Dígito`. 
 De uma conta empresarial queremos saber a `Razão Social`, o `Nome Fantasia`, o `CNPJ`, além do `id de Usuário` que será dono dessa conta. 
 De uma conta pessoal, queremos saber apenas seu `Nome` e `CPF`, além do `id de Usuário` que será dono dessa conta. 
 

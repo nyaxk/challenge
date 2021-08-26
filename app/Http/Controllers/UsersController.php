@@ -9,29 +9,77 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     /**
-     * Fetch all users
+     * Get all users
+     * @param Request $request
      * @return Collection
      */
-    private function getAllUsers(): Collection
+    public function index(Request $request): Collection
     {
-        return Users::all();
+        return Users::getAllUsers();
     }
 
     /**
-     * Fetch specific users
-     * @param $query
-     * @return Collection
+     * Show the form for creating a new resource.
+     *
+     * @return false
      */
-    private function getAllUsersQuery($query): Collection
+    public function create(): bool
     {
-        return Users::search($query)->get();
+        return false;
     }
 
-    public function index(Request $request): Collection
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Request $request
+     * @return false
+     */
+    public function store(Request $request): bool
     {
-        if ($request->input('q'))
-            return $this->getAllUsersQuery($request->input('q'));
-        else
-            return $this->getAllUsers();
+        return false;
+    }
+
+    /**
+     * Get all users by Name
+     * @param $name
+     * @return Collection
+     */
+    public function show($name): Collection
+    {
+        return Users::getAllUsersQuery($name);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return false
+     */
+    public function edit($id): bool
+    {
+        return false;
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param  int  $id
+     * @return false
+     */
+    public function update(Request $request, $id): bool
+    {
+        return false;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return false
+     */
+    public function destroy($id): bool
+    {
+        return false;
     }
 }
