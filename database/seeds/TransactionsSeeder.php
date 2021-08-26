@@ -1,9 +1,6 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class TransactionsSeeder extends Seeder
 {
@@ -24,19 +21,25 @@ class TransactionsSeeder extends Seeder
             'users_id' => 1,
             'accounts_id' => 1,
             'value' => 10.99,
-            'type' => 'billPayment'
+            'type' => 'deposit'
         ]);
         DB::table('transactions')->insert([
             'users_id' => 1,
             'accounts_id' => 1,
             'value' => 20.99,
-            'type' => 'billPayment'
+            'type' => 'cellPhoneRecharge'
         ]);
         DB::table('transactions')->insert([
             'users_id' => 1,
             'accounts_id' => 1,
             'value' => 500.99,
-            'type' => 'billPayment'
+            'type' => 'transfer'
+        ]);
+        DB::table('transactions')->insert([
+            'users_id' => 1,
+            'accounts_id' => 1,
+            'value' => 60.99,
+            'type' => 'purchaseCredit'
         ]);
     }
 }

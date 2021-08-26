@@ -13,7 +13,7 @@ class Users extends Model
 
     protected $primaryKey = "id";
     protected $fillable = ['name', 'email', 'email', 'cpf', 'phoneNumber'];
-    protected $hidden = ['password','id'];
+    protected $hidden = ['password'];
 
     /**
      * Scout search

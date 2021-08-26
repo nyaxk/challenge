@@ -13,22 +13,22 @@ class AccountsSeeder extends Seeder
     {
         DB::table('accounts')->insert([
            'users_id' => 1,
-            'agency' => 123,
-            'number' => 123,
-            'digit' => 01,
+            'agency' => '01',
+            'number' => '92570961',
+            'digit' => '82',
             'corporateName' => 'PERSONAL',
             'fantasyName' => 'TEST PERSONAL',
-            'type' => 'person'
+            'type' => 'personal'
         ]);
 
         DB::table('accounts')->insert([
             'users_id' => 1,
-            'agency' => 123,
-            'number' => 123,
-            'digit' => 01,
+            'agency' => '01',
+            'number' => '089932021',
+            'digit' => '12',
             'corporateName' => 'COMPANY',
-            'fantasyName' => 'TEST COMP',
-            'cnpj' => 123,
+            'fantasyName' => 'TEST COMPANY',
+            'cnpj' => '49386900000108',
             'type' => 'company'
         ]);
     }
