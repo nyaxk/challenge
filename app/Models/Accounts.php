@@ -11,7 +11,7 @@ class Accounts extends Model
 {
     protected $primaryKey = "id";
     protected $fillable = ['id', 'agency', 'number', 'digit', 'corporateName', 'fantasyName', 'cnpj', 'type'];
-    protected $hidden = ['users_id', 'id'];
+    protected $hidden = ['users_id'];
 
     /**
      * Fetch specific accounts
