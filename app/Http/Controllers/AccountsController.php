@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Accounts;
-use App\Models\Users;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
@@ -16,7 +15,7 @@ class AccountsController extends Controller
      */
     public function index(): Collection
     {
-        return Accounts::getAllAccounts();
+        return Accounts::all();
     }
 
     /**
@@ -48,7 +47,7 @@ class AccountsController extends Controller
      */
     public function show($id): Collection
     {
-        return Accounts::getAccount($id);
+        return Accounts::with(['user', 'transactions'])->find( $id)->get();
     }
 
     /**

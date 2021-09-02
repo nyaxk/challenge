@@ -16,8 +16,8 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50);
-            $table->unsignedBigInteger('cpf')->unique();
-            $table->unsignedBigInteger('phoneNumber');
+            $table->bigInteger('cpf')->unique();
+            $table->bigInteger('phoneNumber');
             $table->string('email', 50)->unique();
             $table->string('password', 72); // 72 length to bcrypt hash
             $table->timestamps();

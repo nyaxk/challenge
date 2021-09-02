@@ -23,3 +23,5 @@ Route::resource('users',UsersController::class)->only([
     'index',
     'show'
 ]);
+
+

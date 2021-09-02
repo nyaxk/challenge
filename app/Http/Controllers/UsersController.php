@@ -15,7 +15,7 @@ class UsersController extends Controller
      */
     public function index(Request $request): Collection
     {
-        return Users::getAllUsers();
+        return Users::all();
     }
 
     /**
@@ -41,18 +41,18 @@ class UsersController extends Controller
 
     /**
      * Get all users by Name
-     * @param $name
+     * @param $query
      * @return Collection
      */
-    public function show($name): Collection
+    public function show($query): Collection
     {
-        return Users::getAllUsersQuery($name);
+        return Users::search($query)->get()->load(['accounts', 'transactions']);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return false
      */
     public function edit($id): bool
@@ -64,7 +64,7 @@ class UsersController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  int  $id
+     * @param int $id
      * @return false
      */
     public function update(Request $request, $id): bool
@@ -75,7 +75,7 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return false
      */
     public function destroy($id): bool

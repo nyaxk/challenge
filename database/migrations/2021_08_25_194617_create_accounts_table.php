@@ -15,13 +15,13 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('users_id');
+            $table->bigInteger('users_id');
             $table->string('agency', 50);
-            $table->unsignedBigInteger('number');
-            $table->unsignedInteger('digit');
+            $table->bigInteger('number');
+            $table->bigInteger('digit');
             $table->string('corporateName', 50)->nullable();
             $table->string('fantasyName', 50)->nullable();
-            $table->unsignedBigInteger('cnpj')->unique()->nullable();
+            $table->bigInteger('cnpj')->unique()->nullable();
             $table->enum('type', ['personal', 'company']);
             $table->timestamps();
         });
